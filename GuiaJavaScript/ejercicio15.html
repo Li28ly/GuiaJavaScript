@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <!-- Generar un presupuesto de un equipo de computación a partir de tres
+    objetos de tipo SELECT que nos permiten seleccionar:
+    • Procesador (Intel I3 - $400, Intel I5 $600, Intel I7 $800).
+    • Monitor (Samsung 20' - $250, Samsung 22' - $350, Samsung 26' -$550)
+    • Disco Duro(500 Gb - $300, 1 Tb - $440, 3 Tb - $500)
+    Para cada característica indicamos string a mostrar (Ej. Intel I3) y el valor
+    asociado a dicho string (Ej. 400). Al presionar un botón "Calcular" mostrar
+    el presupuesto en un objeto de tipo TEXT. -->
+    
+    <form>
+        <p> Procesador:</p>
+        <p><select id="procesador">
+                <option value="400">Intel I3</option>
+                <option value="600">Intel I5</option>
+                <option value="800">Intel I7</option>
+         </select></p>
+        <p> Monitor:</p>
+        <p><select id="monitor">
+                <option value="250">Monitor Samsung 20'</option>
+                <option value="350">Monitor Samsung 22'</option>
+                <option value="550">Monitor Samsung 26'</option>
+         </select></p>
+        <p> Disco duro:</p>
+        <p><select id="discoduro">
+                <option value="300">Disco Duro 500 Gb</option>
+                <option value="440">Disco Duro 1 Tb</option>
+                <option value="500">Disco Duro 3 Tb</option>
+           </select></p>
+        <p><input type="button" value="Calcular" onClick="calcular()"></p>
+        <p><input type="text" id="resultado"></p>
+    </form>
+
+    <script>
+        function calcular() {
+            var elem1 = document.getElementById('procesador')
+            var precio1 = elem1.options[elem1.selectedIndex].value;
+            var elem2 = document.getElementById('monitor')
+            var precio2 = elem2.options[elem2.selectedIndex].value;
+            var elem3 = document.getElementById('discoduro')
+            var precio3 = elem3.options[elem3.selectedIndex].value;
+            precio1 = parseInt(precio1);
+            precio2 = parseInt(precio2);
+            precio3 = parseInt(precio3);
+            var suma = precio1 + precio2 + precio3;
+            document.getElementById('resultado').value = suma;
+        }
+    </script>
+</body>
+</html>

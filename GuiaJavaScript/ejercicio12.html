@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <!-- Confeccionar una función a la cual le envíe tres enteros y los muestre
+    ordenados de menor a mayor -->
+    <script>
+        function mostrarOrdenados(n1, n2, n3) {
+            if (n1 < n2 && n1 < n3) {
+                document.write(n1 + ' - ');
+                if (n2 < n3) {
+                    document.write(n2 + ' - ' + n3);
+                } else {
+                    document.write(n3 + ' - ' + n2);
+                }
+            } else {
+                if (n2 < n3) {
+                    document.write(n2 + ' - ');
+                    if (n1 < n3) {
+                        document.write(n1 + ' - ' + n3);
+                    } else {
+                        document.write(n3 + ' - ' + n1);
+                    }
+                } else {
+                    document.write(n3 + ' - ');
+                    if (n1 < n2) {
+                        document.write(n1 + ' - ' + n2);
+                    } else {
+                        document.write(n2 + ' - ' + n1);
+                    }
+                }
+            }
+        }
+
+
+        var valor1 = parseInt(prompt('Ingrese primer valor:'));
+        var valor2 = parseInt(prompt('Ingrese segundo valor:'));
+        var valor3 = parseInt(prompt('Ingrese tercer valor:'));
+        document.write('Los tres valores ingresados son: ' + valor1 + ' - ' + valor2 + ' - ' + valor3 + '<br>');
+        document.write('Los valores ordenados de menor a mayor son: ');
+        mostrarOrdenados(valor1, valor2, valor3);
+    </script>
+</body>
+</html>

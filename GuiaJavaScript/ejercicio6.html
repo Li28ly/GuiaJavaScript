@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <!-- Realizar un programa que lea cuatro valores numéricos e informar su suma y
+    producto. -->
+    
+    <script>
+        var num1;
+        var num2;
+        var num3;
+        var num4;
+        num1 = prompt('Ingrese primer valor: ');
+        num2 = prompt('Ingrese segundo valor: ');
+        num3 = prompt('Ingrese tercer valor: ');
+        num4 = prompt('Ingrese cuarto valor: ');
+        var suma;
+        suma = parseInt(num1) + parseInt(num2) + parseInt(num3) + parseInt(num4);
+        var producto;
+        producto = parseInt(num1) * parseInt(num2) * parseInt(num3) * parseInt(num4);
+        document.write('La suma de los cuatro valores es: ');
+        document.write(suma);
+        document.write('<br>');
+        document.write('El producto de los cuatro valor es: ');
+        document.write(producto);
+    </script>
+</body>
+</html>

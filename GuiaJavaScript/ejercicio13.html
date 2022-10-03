@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <!-- Desarrollar un programa que permita ingresar un vector de 8 elementos, e
+    informe:
+    • El valor acumulado de todos los elementos del vector.
+    • El valor acumulado de los elementos del vector que sean mayores a 36.
+    • Cantidad de valores mayores a 50. -->
+
+    <script>
+        function cargar(vector) {
+            for (var f = 0; f < vector.length; f++) {
+                var valor = prompt('Ingrese componente: ');
+                vector[f] = parseInt(valor);
+            }
+        }
+
+        function sumar(vector) {
+            var suma = 0;
+            for (var f = 0; f < vector.length; f++) {
+                suma = suma + vector[f];
+            }
+            document.write('El valor acumulado de los componentes es: ' + suma + '<br>');
+        }
+
+        function sumarMayor36(vector) {
+            var suma = 0;
+            for (var f = 0; f < vector.length; f++) {
+                if (vector[f] > 36) {
+                    suma = suma + vector[f];
+                }
+            }
+            document.write('El valor acumulado de los componentes mayores a 36 es: ' + suma + '<br>');
+        }
+
+        function cantidadMayores50(vector) {
+            var cant = 0;
+            for (var f = 0; f < vector.length; f++) {
+                if (vector[f] > 50) {
+                    cant = cant + 1;
+                }
+            }
+            document.write('La cantidad de componentes mayores a 50 es: ' + cant + '<br>');
+        }
+
+        var vector = new Array(8);
+        cargar(vector);
+        sumar(vector);
+        sumarMayor36(vector);
+        cantidadMayores50(vector);
+    </script>
+</body>
+</html>

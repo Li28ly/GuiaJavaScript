@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <script>
+    /*Confeccionar una función que solicite la carga de dos enteros (primero el
+    menor y luego el mayor) y nos muestre desde el menor hasta el mayor de uno
+    en uno. Por ejemplo, si ingresamos los valores 4 y 10 luego se debe mostrar por
+    pantalla.*/
+
+        function mostrarRango() {
+            var inicio = parseInt(prompt("Ingrese valor inicial: "))
+            var fin = parseInt(prompt("Ingrese valor final"))
+            for (var f = inicio; f <= fin; f++) {
+                document.write(f + " - ")
+            }
+        }
+
+        mostrarRango();
+    </script>
+</body>
+</html>
